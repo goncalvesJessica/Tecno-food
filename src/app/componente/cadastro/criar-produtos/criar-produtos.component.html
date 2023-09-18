@@ -1,0 +1,133 @@
+<section class="container criar-produto ff-inter">
+  <header class="header">
+      <h2>Adicione um novo produto:</h2>
+  </header>
+  <form>
+    <label for="produto">Produto</label>
+    <input
+      type="textarea"
+      class="input"
+      id="Produto"
+      name="Produto"
+      placeholder="Digite o Produto"
+      [(ngModel)]="produto.conteudo"
+
+        >
+    <label for="descricao">Descrição</label>
+    <input
+      type="textarea"
+      class="input"
+      id="descricao"
+      name="descricao"
+      placeholder="Digite a descricao"
+      [(ngModel)]="produto.descricao"
+
+        >
+
+      <label for = "modelo"> Selecione a categoria do produto: </label>
+    <div class= "container-radio">
+      <div class = "radio-modelo">
+        <label for = "modelo1">
+          <input
+          type = "radio"
+          id = "modelo1"
+          value="modelo1"
+          name = "modelo-card"
+          [(ngModel)]="produto.modelo"
+          >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span> Lanche</span>
+          </label>
+
+          Prévia do produto:
+          <div class="modelo modelo1 ff-roboto-mono"></div>
+          <p class="conteudo">{{ produto.conteudo }}</p>
+<p class=""descricao>{{ produto.descricao }}</p>
+
+
+          </div>
+      <div class = "radio-modelo">
+        <label for = "modelo2">
+          <input
+          type = "radio"
+          id = "modelo2"
+          value="modelo2"
+          name = "modelo-card"
+          [(ngModel)]="produto.modelo"
+          >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Salgados</span>
+          </label>
+
+
+
+
+          </div>
+      <div class = "radio-modelo">
+        <label for = "modelo3">
+          <input
+          type = "radio"
+          id = "modelo3"
+          value="modelo3"
+          name = "modelo-card"
+          [(ngModel)]="produto.modelo"
+          >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Refrigerante</span>
+          </label>
+
+
+
+
+          </div>
+      <div class = "radio-modelo">
+        <label for = "modelo4">
+          <input
+          type = "radio"
+          id = "modelo4"
+          value="modelo4"
+          name = "modelo-card"
+          [(ngModel)]="produto.modelo"
+          >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Doces</span>
+          </label>
+
+
+
+
+          </div>
+
+      <div class = "radio-modelo">
+        <label for = "modelo5">
+          <input
+          type = "radio"
+          id = "modelo5"
+          value="modelo5"
+          name = "modelo-card"
+          [(ngModel)]="produto.modelo"
+          >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Outros</span>
+          </label>
+
+
+
+      </div>
+          </div>
+          <div class="acoes">
+            <button (click)="criarProduto()" class="botao">Salvar</button>
+            <button class="botao">Cancelar</button>
+          </div>
+    </form>
+</section>
