@@ -9,6 +9,7 @@ import { RodapeComponent } from './componente/rodape/rodape.component';
 import { CriarProdutosComponent } from './componente/cadastro/criar-produtos/criar-produtos.component';
 import { FormsModule } from '@angular/forms';
 import { ListarProdutosComponent } from './componente/cadastro/listar-produtos/listar-produtos.component';
+import { BodyComponent } from './componente/body/body.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ListarProdutosComponent } from './componente/cadastro/listar-produtos/l
     CabecalhoComponent,
     RodapeComponent,
     CriarProdutosComponent,
-    ListarProdutosComponent
+    ListarProdutosComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,

@@ -20,7 +20,7 @@ align-items: center;
   text-decoration: none;
 }
 
-#add a{
+.add a{
   color: white;
   font-size: 130%;
 }
@@ -28,7 +28,7 @@ align-items: center;
 a:link{
   text-decoration: none;
 }
-#add a:hover {
+.add a:hover {
   color:black;
 
 }
@@ -65,3 +65,5 @@ a:link{
     display: none;
   }
 }
+
+

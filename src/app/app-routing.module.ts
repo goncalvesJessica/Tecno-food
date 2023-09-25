@@ -5,29 +5,15 @@ import { ListarProdutosComponent } from './componente/cadastro/listar-produtos/l
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {
-    path:'',
-    // /pathMatch e uma propriedade para ultilizar quando não tem caminho, o mais recomendado para usar e o full pois le toda url /
-    redirectTo:'Home',
-    pathMatch:'full'
-  },
-  {
-    path:'criarProduto',
-    component:CriarProdutosComponent
-  },
-  {
-    path:'listarProduto',
-    component:ListarProdutosComponent
-  },
-  {
-    path:'Home',
-    component:HomeComponent
-  },
-
+  { path: '', component: HomeComponent },
+  { path: 'produtos', component: CriarProdutosComponent },
+  { path: 'listar', component: ListarProdutosComponent },
+  { path: '**', pathMatch: 'full', redirectTo: '' }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
