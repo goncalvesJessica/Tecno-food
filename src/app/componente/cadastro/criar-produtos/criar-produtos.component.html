@@ -1,29 +1,35 @@
-<section class="container criar-produto ff-inter">
-  <header class="header">
-      <h2>Adicione um novo produto:</h2>
-  </header>
-  <form>
-    <label for="produto">Produto</label>
-    <input
-      type="textarea"
-      class="input"
-      id="Produto"
-      name="Produto"
-      placeholder="Digite o Produto"
-      [(ngModel)]="produto.conteudo"
+<section class="container">
 
-        >
-    <label for="descricao">Descrição</label>
-    <input
-      type="textarea"
-      class="input"
-      id="descricao"
-      name="descricao"
-      placeholder="Digite a descricao"
-      [(ngModel)]="produto.descricao"
+        <a class="links" id="paracadastro"></a>
+        <a class="links" id="paralogin"></a>
 
-        >
+        <div class="content">
+          <!--FORMULÁRIO DE CADASTRO-->
+          <div id="cadastro">
+            <form method="post" action="">
 
+              <p>
+                <label for="produto">Nome do produto</label>
+                <input id="produto" name="produto" required="required" type="text" placeholder="X-tudo" />
+              </p>
+
+              <p>
+                <label for="desc_cad">Descrição</label>
+                <input id="descricao" name="desc_cad" required="required" type="text" placeholder="Descrever o produto"/>
+              </p>
+
+              <p>
+                <label for="senha_cad">Valor</label>
+                <input id="senha_cad" name="senha_cad" required="required" type="float" placeholder="12,00"/>
+              </p>
+              <p>
+                <label for="senha_cad">Quantidade</label>
+                <input id="senha_cad" name="senha_cad" required="required" type="number" placeholder="3" />
+
+              </p>
+              <p>
+                <input type="submit" value="Cadastrar" routerLink="listar">
+              </p>
       <label for = "modelo"> Selecione a categoria do produto: </label>
     <div class= "container-radio">
       <div class = "radio-modelo">
@@ -41,12 +47,6 @@
           <span> Lanche</span>
           </label>
 
-          Prévia do produto:
-          <div class="modelo modelo1 ff-roboto-mono"></div>
-          <p class="conteudo">{{ produto.conteudo }}</p>
-<p class=""descricao>{{ produto.descricao }}</p>
-
-
           </div>
       <div class = "radio-modelo">
         <label for = "modelo2">
@@ -62,9 +62,6 @@
           </div>
           <span>Salgados</span>
           </label>
-
-
-
 
           </div>
       <div class = "radio-modelo">
@@ -101,9 +98,6 @@
           <span>Doces</span>
           </label>
 
-
-
-
           </div>
 
       <div class = "radio-modelo">
@@ -120,14 +114,13 @@
           </div>
           <span>Outros</span>
           </label>
-
-
-
       </div>
+
+      Prévia do produto:
+      <div class="modelo modelo1 ff-roboto-mono"></div>
+      <p class="conteudo">{{ produto.conteudo }}</p>
+<p class=""descricao>{{ produto.descricao }}</p>
           </div>
-          <div class="acoes">
-            <button (click)="criarProduto()" class="botao">Salvar</button>
-            <button class="botao">Cancelar</button>
-          </div>
+
     </form>
-</section>
+

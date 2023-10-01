@@ -11,6 +11,24 @@
         "duplicate-id": "off"
       }
     ],
-    "button-type": "off"
+    "button-type": "off",
+    "axe/name-role-value": "off",
+    "axe/keyboard": "off",
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
+    ],
+    "disown-opener": "off",
+    "meta-viewport": "off",
+    "axe/text-alternatives": [
+      "default",
+      {
+        "image-alt": "off",
+        "document-title": "off"
+      }
+    ],
+    "no-inline-styles": "off"
   }
 }
