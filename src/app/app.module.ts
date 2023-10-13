@@ -12,6 +12,9 @@ import { ListarProdutosComponent } from './componente/cadastro/listar-produtos/l
 import { BodyComponent } from './componente/body/body.component';
 import { LoginComponent } from './componente/login/login.component';
 import { CadastroUsuarioComponent } from './componente/cadastro-usuario/cadastro-usuario.component';
+import { HomeComponent } from './componente/home/home.component';
+import { SobreComponent } from './componente/sobre/sobre.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +26,11 @@ import { CadastroUsuarioComponent } from './componente/cadastro-usuario/cadastro
     ListarProdutosComponent,
     BodyComponent,
     LoginComponent,
-    CadastroUsuarioComponent
+    CadastroUsuarioComponent,
+    HomeComponent,
+    SobreComponent,
+
+
   ],
   imports: [
     BrowserModule,
