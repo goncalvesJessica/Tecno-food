@@ -1,18 +1,163 @@
 .mural {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin: 1rem 0 2rem;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* gap: 2rem; */
+  /* justify-content: center; */
+  /* margin: 1rem 0 2rem; */
+  box-shadow:  8px 8px 8px #154580;
+  border-radius: 15%;
 }
 
 .d-flex{
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   gap: 2rem;
 }
 
-.sem-pensamentos {
-  text-align: center;
-  padding: 2rem 0 5rem;
+.botao {
+  border: none;
+  cursor: pointer;
+  margin-left: 50;
+  margin-top: 10px;
+  padding: 5;
 }
+
+.button-container {
+  display: flex;
+
+}
+
+.edit-button, .delete-button {
+  margin-right: 10px; /* Espaço entre os botões, ajuste conforme necessário */
+}
+
+/* Estilos adicionais para os botões (opcional) */
+.edit-button {
+  background-color: #4CAF50; /* Cor de fundo para o botão de editar */
+  color: white; /* Cor do texto para o botão de editar */
+  border: none; /* Sem borda */
+  padding: 10px 12px; /* Preenchimento interno */
+  border-radius: 15%;
+
+
+}
+
+.delete-button {
+  background-color: #f44336; /* Cor de fundo para o botão de excluir */
+  color: white; /* Cor do texto para o botão de excluir */
+  border: none; /* Sem borda */
+  padding: 10px 13px; /* Preenchimento interno */
+  border-radius: 15%;
+  margin-right: 80%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #f0f0f0;
+}
+
+body {
+  color: gray;
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  background-color: white;
+  border: 1px solid;
+  border-radius: 1rem;
+  color: dark;
+  padding: 0.5rem;
+  text-transform: lowercase;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Controla o espaçamento entre as colunas */
+  max-width: 100;
+  box-sizing: border-box;
+}
+
+.cards__item {
+  width: calc(25% - 10px); /* Defina a largura desejada para cada cartão com margem */
+  margin: 5px; /* Espaçamento entre os cartões */
+
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+}
+
+/* botao */
+.card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;;
+  color: black;
+}
+
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  filter: saturate(180%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+  &::before {
+    content: "";
+	  display: block;
+
+  }
+  @media(min-width: 40rem) {
+    &::before {
+      padding-top: 66.6%;
+    }
+  }
+}
+
+.card__image--fence {
+  background-image: url(https://unsplash.it/800/600?image=59);
+}
+
+.card__title {
+  color: dark;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+

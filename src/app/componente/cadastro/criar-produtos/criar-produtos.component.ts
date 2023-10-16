@@ -8,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class CriarProdutosComponent implements OnInit {
 
   produto = {
-    id: '',
-    conteudo: '',
-    descricao: '',
-    modelo: ''
+    id: '1',
+    nome: 'coxinha',
+    descricao: 'frango com catupily',
+    modelo: '2',
+    valor:'2.50',
+    quantidade:'2'
   }
 
   constructor() { }

@@ -1,19 +1,143 @@
-<!DOCTYPE html>
-<html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="criar-produtos.component.css"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&amp;display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div class="main">
+  <section style="margin-left: 33%;">
+
+
+    <div class="cadastro">
 
           <h2 class="form_title title">Criar produto</h2>
-          <input class="form__input" type="text" placeholder="Nome do produto">
-          <input class="form__input" type="number" placeholder="Valor">
-          <input class="form__input" type="number" placeholder="Quantidade">
-          <input class="form__input_d" type="text" placeholder="Descrição">
+
+          <form>
+          <input class="form__input"
+          type="text"
+          placeholder="Nome do produto"
+          id="produto"
+          [(ngModel)]="produto.nome"
+          >
+
+        </form>
+
+        <form>
+          <input class="form__input"
+          type="number"
+          placeholder="Valor"
+          id="valor"
+          [(ngModel)]="produto.valor">
+        </form>
+
+
+        <form>
+          <input class="form__input"
+          type="number"
+          placeholder="Quantidade"
+          id="quantidade"
+          [(ngModel)]="produto.quantidade">
+        </form>
+
+
+          <form>
+          <input class="form__input_d"
+          type="text"
+          placeholder="Descrição"
+          id="descricao"
+          [(ngModel)]="produto.descricao">
+        </form>
+
+        <div class="container-radio">
+          <div class="radio-modelo">
+            <label for="modelo1">
+              <input
+              type="radio"
+              id="modelo1"
+              value="modelo1"
+              name="modelo-card"
+              >
+              <div class="custom-radio">
+                <span></span>
+              </div>
+              <span>Salgado</span>
+            </label>
+          </div>
+
+          <div class="radio-modelo">
+            <label for="modelo2">
+              <input
+              type="radio"
+              id="modelo2"
+              value="modelo2"
+              name="modelo-card"
+              >
+              <div class="custom-radio">
+                <span></span>
+              </div>
+              <span>Lanches</span>
+            </label>
+          </div>
+          <div class="radio-modelo">
+            <label for="modelo3">
+              <input
+              type="radio"
+              id="modelo3"
+              value="modelo3"
+              name="modelo-card"
+              >
+              <div class="custom-radio">
+                <span></span>
+              </div>
+              <span>Sobremesas</span>
+            </label>
+          </div>
+          <div class="radio-modelo">
+            <label for="modelo4">
+              <input
+              type="radio"
+              id="modelo4"
+              value="modelo4"
+              name="modelo-card"
+              >
+              <div class="custom-radio">
+                <span></span>
+              </div>
+              <span>Bebidas</span>
+            </label>
+          </div>
+          <div class="radio-modelo">
+            <label for="modelo5">
+              <input
+              type="radio"
+              id="modelo5"
+              value="modelo5"
+              name="modelo-card"
+              >
+              <div class="custom-radio">
+                <span></span>
+              </div>
+              <span>Combos</span>
+            </label>
+          </div>
+          <div class="radio-modelo">
+            <label for="modelo6">
+              <input
+              type="radio"
+              id="modelo6"
+              value="modelo6"
+              name="modelo-card"
+              >
+              <div class="custom-radio">
+                <span></span>
+              </div>
+              <span>Outros</span>
+            </label>
+          </div>
+          <br>
+          Prévia:
+          <div class="modelo modelo1 ff-roboto-mono">
+
+              <p class="produto">{{ produto.nome }}</p>
+              <p class="valor"><b>{{ produto.valor }}</b></p>
+              <p class="quantidade"><b>{{ produto.quantidade }}</b></p>
+              <p class="descricao"><b>{{ produto.descricao }}</b></p>
+          </div>
+        </div>
           <div class="login-box">
             <form>
 
@@ -30,5 +154,5 @@
       </div>
 
 
-  </body>
-</html>
+</section>
+<!-- </html> -->

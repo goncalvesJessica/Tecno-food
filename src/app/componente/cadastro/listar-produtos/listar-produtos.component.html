@@ -1,9 +1,55 @@
-<section class="container">
-  <header class="header d-flex">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-      <h2 class="ff-inter">Meus produtos</h2>
-      <p>
-      <a href="produto" class="botao"> Adicionar produtos </a>
-    </p>
-  </header>
-</section>
+<header class="header d-flex">
+  <h2 class="ff-inter">Meus produtos</h2>
+  <button routerLink="/produto" class="botao"> Adicionar produtos </button>
+</header>
+
+
+<div class="cards">
+  <div *ngFor="let produto of produtos" class="cards__item">
+    <div class="card">
+      <div class="card__image card__image--fence"></div>
+      <div class="card__content">
+        <th class="nome">Nome: {{produto.nome}}</th>
+        <th class="nome">Valor: {{produto.valor}}</th>
+
+        <p class="card__text">Descrição: {{produto.descricao}}</p>
+        <br>
+        <div class="button-container">
+          <button class="edit-button"><i class="fas fa-edit"></i></button>
+          <button class="delete-button"><i class="fas fa-trash-alt"></i></button>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+<!-- <div class="acoes">
+      <button class="botao-editar">
+        aqui
+      </button>
+      <button class="botao-editar">
+        aqui
+      </button>
+
+        </div> -->
+<!-- <div class=" produto">
+
+      <th class="nome">Nome: {{produto.nome}}</th>
+      <br>
+      <th class="nome">Valor: {{produto.valor}}</th>
+      <br>
+      <th class="nome">Quantidade: {{produto.quantidade}}</th>
+      <br>
+      <th class="nome"> Descrição:{{produto.descricao}}</th>
+      <br>
+      <th class="nome">{{produto.categoria}}</th>
+    </div> -->

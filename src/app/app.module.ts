@@ -14,6 +14,9 @@ import { LoginComponent } from './componente/login/login.component';
 import { CadastroUsuarioComponent } from './componente/cadastro-usuario/cadastro-usuario.component';
 import { HomeComponent } from './componente/home/home.component';
 import { SobreComponent } from './componente/sobre/sobre.component';
+import { ProdutoComponent } from './componente/cadastro/produto/produto.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -29,13 +32,19 @@ import { SobreComponent } from './componente/sobre/sobre.component';
     CadastroUsuarioComponent,
     HomeComponent,
     SobreComponent,
+    ProdutoComponent,
+
+
+
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

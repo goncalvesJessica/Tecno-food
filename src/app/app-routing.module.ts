@@ -1,3 +1,4 @@
+import { ProdutoComponent } from './componente/cadastro/produto/produto.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CriarProdutosComponent } from './componente/cadastro/criar-produtos/criar-produtos.component';
@@ -10,15 +11,14 @@ import { SobreComponent } from './componente/sobre/sobre.component';
 
 
 
-
 const routes: Routes = [
-  { path: '',component:LoginComponent },
   { path: 'produtos', component: CriarProdutosComponent },
   { path: 'listar', component: ListarProdutosComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroUsuarioComponent },
   { path: 'sobre', component: SobreComponent },
+  { path: '',component:LoginComponent },
   { path: '**', pathMatch: 'full', redirectTo: '' }
 ];
 
