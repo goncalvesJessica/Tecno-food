@@ -1,9 +1,55 @@
-@gray-darker:               #444444;
-@gray-dark:                 #696969;
-@gray:                      #999999;
-@gray-light:                #cccccc;
-@gray-lighter:              #ececec;
-@gray-lightest:             lighten(@gray-lighter,4%);
+.mural {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* gap: 2rem; */
+  /* justify-content: center; */
+  /* margin: 1rem 0 2rem; */
+  box-shadow:  8px 8px 8px #154580;
+  border-radius: 15%;
+}
+
+.d-flex{
+  display: flex;
+  flex-direction:column;
+  gap: 2rem;
+}
+
+.botao {
+  border: none;
+  cursor: pointer;
+  margin-left: 50;
+  margin-top: 10px;
+  padding: 5;
+}
+
+.button-container {
+  display: flex;
+
+}
+
+.edit-button, .delete-button {
+  margin-right: 10px; /* Espaço entre os botões, ajuste conforme necessário */
+}
+
+/* Estilos adicionais para os botões (opcional) */
+.edit-button {
+  background-color: #4CAF50; /* Cor de fundo para o botão de editar */
+  color: white; /* Cor do texto para o botão de editar */
+  border: none; /* Sem borda */
+  padding: 10px 12px; /* Preenchimento interno */
+  border-radius: 15%;
+
+
+}
+
+.delete-button {
+  background-color: #f44336; /* Cor de fundo para o botão de excluir */
+  color: white; /* Cor do texto para o botão de excluir */
+  border: none; /* Sem borda */
+  padding: 10px 13px; /* Preenchimento interno */
+  border-radius: 15%;
+  margin-right: 80%;
+}
 
 *,
 *::before,
@@ -37,55 +83,42 @@ img {
 .btn {
   background-color: white;
   border: 1px solid;
-border-radius: 1rem;
+  border-radius: 1rem;
   color: dark;
   padding: 0.5rem;
   text-transform: lowercase;
 }
 
-.btn--block {
-  display: block;
-  width: 100%;
-}
-
 .cards {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  justify-content: space-between; /* Controla o espaçamento entre as colunas */
+  max-width: 100;
+  box-sizing: border-box;
 }
 
 .cards__item {
-  display: flex;
-  padding: 1rem;
-  @media(min-width: 40rem) {
-    width: 50%;
-  }
-  @media(min-width: 56rem) {
-    width: 33.3333%;
-  }
+  width: calc(25% - 10px); /* Defina a largura desejada para cada cartão com margem */
+  margin: 5px; /* Espaçamento entre os cartões */
+
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .card {
   background-color: white;
   border-radius: 0.25rem;
   box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  &:hover {
-    .card__image {
-      filter: contrast(100%);
-    }
-  }
+  height: 100%;
 }
 
+/* botao */
 .card__content {
   display: flex;
-  flex: 1 1 auto;
   flex-direction: column;
-  padding: 1rem;
+  padding: 10px;;
+  color: black;
+
 }
 
 .card__image {
@@ -102,25 +135,13 @@ border-radius: 1rem;
   &::before {
     content: "";
 	  display: block;
-    padding-top: 56.25%;
+
   }
   @media(min-width: 40rem) {
     &::before {
       padding-top: 66.6%;
     }
   }
-}
-
-.card__image--flowers {
-  background-image: url(https://unsplash.it/800/600?image=82);
-}
-
-.card__image--river {
-  background-image: url(https://unsplash.it/800/600?image=11);
-}
-
-.card__image--record {
-  background-image: url(https://unsplash.it/800/600?image=39);
 }
 
 .card__image--fence {
@@ -141,4 +162,24 @@ border-radius: 1rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
 }
+
+.buybutton{
+  color: white;
+  background-color: #f44336;
+  border: none; /* Remove a borda */
+  outline: none; /* Remove a marcação ao focar */
+  width: 50%;
+  padding: 2%;
+  margin-left: 25%;
+  margin-top: 35%;
+  border-radius: 8%;
+}
+
+
+/* @import url(https://weloveiconfonts.com/api/?family=entypo|fontawesome) */
+/* entypo */
+
+/* fontawesome */
+
+
 

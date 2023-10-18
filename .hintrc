@@ -35,7 +35,8 @@
       {
         "ignore": [
           "user-select",
-          "width: fit-content"
+          "width: fit-content",
+          "scroll-behavior"
         ]
       }
     ]

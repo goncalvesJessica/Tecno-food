@@ -12,12 +12,11 @@ import { SobreComponent } from './componente/sobre/sobre.component';
 
 
 const routes: Routes = [
-  { path: 'produtos', component: CriarProdutosComponent },
   { path: 'listar', component: ListarProdutosComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroUsuarioComponent },
-  { path: 'sobre', component: SobreComponent },
+  { path: 'criar', component: CriarProdutosComponent },
   { path: '',component:LoginComponent },
   { path: '**', pathMatch: 'full', redirectTo: '' }
 ];

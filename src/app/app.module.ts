@@ -18,7 +18,6 @@ import { ProdutoComponent } from './componente/cadastro/produto/produto.componen
 import { HttpClientModule } from '@angular/common/http';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
