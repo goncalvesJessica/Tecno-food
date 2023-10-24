@@ -1,4 +1,11 @@
+import { Produto } from './../../../Dto/Produto';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+
+
+
 
 @Component({
   selector: 'app-criar-produtos',
@@ -7,20 +14,62 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CriarProdutosComponent implements OnInit {
 
-  produto = {
-    id: '1',
-    nome: 'coxinha',
-    descricao: 'frango com catupily',
-    modelo: '2',
-    valor:'2.50',
-    quantidade:'2'
-  }
+  private readonly api = "https://localhost:7151/produto";
 
-  constructor() { }
+  produto: Produto = new Produto();
+
+  constructor(private client: HttpClient) { }
 
   ngOnInit(): void {
   }
-  criarProduto(){
-    alert("Produto criado com sucesso")
+
+
+  upSert() {
+    if (!this.produto.id) {
+      this.Create();
+    }
+    else {
+      this.Update(this.produto.id);
+    }
   }
+
+  Create() {
+    const model = JSON.parse(JSON.stringify(this.produto));
+    console.log(model)
+
+    this.client.post<Produto>(this.api, model, {
+      headers: new HttpHeaders({
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+
+      })
+    }).subscribe(
+      (response) => {
+
+      },
+      (e) => {
+
+      });
+
+  }
+  Update(id: number) {
+
+    const model = JSON.parse(JSON.stringify(this.produto));
+    let url = id ? this.api + "/" + id : this.api;
+
+    this.client.put(url, model, {
+      headers: new HttpHeaders({
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+
+      })
+    }).subscribe(
+      (response) => {
+        window.location.href = '/produtos';
+      },
+      (e) => {
+
+      });
+  }
+
 }

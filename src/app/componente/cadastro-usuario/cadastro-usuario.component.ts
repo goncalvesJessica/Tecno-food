@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastro-usuario.component.css']
 })
 export class CadastroUsuarioComponent implements OnInit {
+  isClosed = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  toggleEye() {
+    this.isClosed = !this.isClosed;
+  }
 }

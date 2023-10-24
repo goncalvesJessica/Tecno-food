@@ -16,7 +16,16 @@
           <input class="form__input" type="text" placeholder="Email">
           <input class="form__input" type="number" placeholder="CPF">
           <input class="form__input" type="number" placeholder="Celular">
+          <!-- <div class="eye-icon" [ngClass]="{ 'closed': isClosed }" (click)="toggleEye()">
           <input class="form__input" type="password" placeholder="Senha">
+        </div> -->
+        <div class="form-group">
+          <div class="password-input-container">
+            <input class="form__input" id="password" name="password" [type]="isClosed ? 'password' : 'text'" placeholder="Digite sua senha">
+            <div class="eye-icon" [ngClass]="{ 'closed': isClosed }" (click)="toggleEye()"></div>
+          </div>
+        </div>
+
           <button class="form__button button submit" routerLink="/home">CADASTRAR</button>
         </form>
       </div>

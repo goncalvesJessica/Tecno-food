@@ -7,7 +7,7 @@ body {
 	width: 100%;
 	background-color: transparentize(#f5b8d5, 0.5);
 	position: sticky;
-	top: 0;
+	top: -10;
 	z-index: 10;
 }
 
@@ -27,7 +27,7 @@ body {
 	&:before,
 	&:after {
 		content: "";
-		position: absolute;
+		/* position: absolute; */
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -45,4 +45,11 @@ body {
 		transform: rotate(2deg);
 		z-index: -2;
 	}
+}
+.sobre {
+  font-size: 0.6em; /* Diminui o tamanho do texto */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Aplica uma fonte divertida (exemplo: Comic Sans MS) */
+  /* Outros estilos divertidos, como cores ou estilos de fundo, podem ser adicionados conforme necessário */
+  padding-top: 360px;
+  margin-right: 5%;
 }

@@ -69,3 +69,18 @@ a:link{
 }
 
 
+.icon-white-black {
+  color: white;
+  transition: color 0.3s;
+}
+
+.icon-white-black:hover {
+  color: black;
+}
+
+.icon-large {
+  font-size: 20px;
+}
+
+
+

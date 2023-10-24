@@ -14,7 +14,6 @@ import { LoginComponent } from './componente/login/login.component';
 import { CadastroUsuarioComponent } from './componente/cadastro-usuario/cadastro-usuario.component';
 import { HomeComponent } from './componente/home/home.component';
 import { SobreComponent } from './componente/sobre/sobre.component';
-import { ProdutoComponent } from './componente/cadastro/produto/produto.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -31,11 +30,6 @@ import { HttpClientModule } from '@angular/common/http';
     CadastroUsuarioComponent,
     HomeComponent,
     SobreComponent,
-    ProdutoComponent,
-
-
-
-
 
   ],
   imports: [

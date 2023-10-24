@@ -14,12 +14,7 @@
     "button-type": "off",
     "axe/name-role-value": "off",
     "axe/keyboard": "off",
-    "axe/forms": [
-      "default",
-      {
-        "label": "off"
-      }
-    ],
+    "axe/forms": "off",
     "disown-opener": "off",
     "meta-viewport": "off",
     "axe/text-alternatives": [

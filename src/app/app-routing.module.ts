@@ -1,4 +1,3 @@
-import { ProdutoComponent } from './componente/cadastro/produto/produto.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CriarProdutosComponent } from './componente/cadastro/criar-produtos/criar-produtos.component';
@@ -16,6 +15,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroUsuarioComponent },
+  { path: 'sobre', component: SobreComponent },
   { path: 'criar', component: CriarProdutosComponent },
   { path: '',component:LoginComponent },
   { path: '**', pathMatch: 'full', redirectTo: '' }

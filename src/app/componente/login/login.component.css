@@ -251,3 +251,35 @@ body {
     width: 500px;
   }
 }
+
+.eye-icon::before {
+  content: "\f070"; /* Código do ícone de olho aberto no Font Awesome */
+  font-family: "Font Awesome 5 Free";
+  right: 25%;
+  /* Outros estilos podem ser aplicados aqui, como cor, tamanho, posicionamento, etc. */
+}
+
+.eye-icon.closed::before {
+  content: "\f06e"; /* Código do ícone de olho fechado no Font Awesome */
+  font-family: "Font Awesome 5 Free";
+  /* Outros estilos podem ser aplicados aqui, como cor, tamanho, posicionamento, etc. */
+}
+
+
+.form-group {
+  position: relative;
+}
+
+.password-input-container {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Ajuste a posição conforme necessário */
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Adicione outros estilos conforme necessário */
