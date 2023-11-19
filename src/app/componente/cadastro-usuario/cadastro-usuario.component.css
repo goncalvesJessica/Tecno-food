@@ -282,3 +282,7 @@ body {
 }
 
 /* Adicione outros estilos conforme necessário */
+
+.error-message {
+  color: red;
+}

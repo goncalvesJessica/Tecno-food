@@ -21,23 +21,29 @@
 
         <label class="select">
           <select class="select" >
-            <option value="1">Salgado</option>
-            <option value="2">Lanches</option>
-            <option value="3">Sobremesas</option>
-            <option value="4">Bebidas</option>
-            <option value="5">Combos</option>
-            <option value="6">Outros</option>
+            <option value="Salgado">Salgado</option>
+            <option value="Lanches">Lanches</option>
+            <option value="Sobremesas">Sobremesas</option>
+            <option value="Bebidas">Bebidas</option>
+            <option value="Combos">Combos</option>
+            <option value="Outros">Outros</option>
           </select>
         </label>
         <div>
         <br>
         Prévia:
+
+        <div class="cards">
+          <div class="cards__item">
+            <div class="card">
+              <div class="card__image card__image--fence"></div>
+              <div class="card__content">
         <div class="modelo modelo1 ff-roboto-mono">
 
-          <p class="produto">{{ produto.nome }}</p>
-          <p class="valor"><b>{{ produto.valor }}</b></p>
-          <p class="quantidade"><b>{{ produto.quantidade }}</b></p>
-          <p class="descricao"><b>{{ produto.descricao }}</b></p>
+          <p class="produto">Nome:{{ produto.nome }}</p>
+          <p class="valor">Valor:<b>{{ produto.valor }}</b></p>
+          <p class="quantidade">Quantidade:<b>{{ produto.quantidade }}</b></p>
+          <p class="descricao">Descrição:<b>{{ produto.descricao }}</b></p>
         </div>
       </div>
     </div>
@@ -46,6 +52,10 @@
             CADASTRAR
           </button>
       </div>
+          </div>
+        </div>
+        </div>
+        </div>
     </form>
 
   </div>
