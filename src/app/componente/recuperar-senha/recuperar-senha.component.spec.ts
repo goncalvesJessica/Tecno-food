@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CarrinhoComponent } from './carrinho.component';
+import { RecuperarSenhaComponent } from './recuperar-senha.component';
 
-describe('CarrinhoComponent', () => {
-
-
-  let component: CarrinhoComponent;
-  let fixture: ComponentFixture<CarrinhoComponent>;
+describe('RecuperarSenhaComponent', () => {
+  let component: RecuperarSenhaComponent;
+  let fixture: ComponentFixture<RecuperarSenhaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CarrinhoComponent ]
+      declarations: [ RecuperarSenhaComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CarrinhoComponent);
+    fixture = TestBed.createComponent(RecuperarSenhaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -22,5 +20,4 @@ describe('CarrinhoComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
 });

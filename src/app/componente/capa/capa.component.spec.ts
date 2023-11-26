@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CarrinhoComponent } from './carrinho.component';
+import { CapaComponent } from './capa.component';
 
-describe('CarrinhoComponent', () => {
-
-
-  let component: CarrinhoComponent;
-  let fixture: ComponentFixture<CarrinhoComponent>;
+describe('CapaComponent', () => {
+  let component: CapaComponent;
+  let fixture: ComponentFixture<CapaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CarrinhoComponent ]
+      declarations: [ CapaComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CarrinhoComponent);
+    fixture = TestBed.createComponent(CapaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -22,5 +20,4 @@ describe('CarrinhoComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
 });

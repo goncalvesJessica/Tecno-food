@@ -14,7 +14,7 @@ import { environment } from 'src/environments/environment';
 })
 export class CriarProdutosComponent implements OnInit {
 
-  private readonly api = "https://localhost:7151/produto";
+  private readonly api = "https://localhost:7151/Product";
 
   produto: Produto = new Produto();
 

@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CarrinhoComponent } from './carrinho.component';
+import { CadastroAdminComponent } from './cadastro-admin.component';
 
-describe('CarrinhoComponent', () => {
-
-
-  let component: CarrinhoComponent;
-  let fixture: ComponentFixture<CarrinhoComponent>;
+describe('CadastroAdminComponent', () => {
+  let component: CadastroAdminComponent;
+  let fixture: ComponentFixture<CadastroAdminComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CarrinhoComponent ]
+      declarations: [ CadastroAdminComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CarrinhoComponent);
+    fixture = TestBed.createComponent(CadastroAdminComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -22,5 +20,4 @@ describe('CarrinhoComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
 });

@@ -14,6 +14,9 @@ import { HomeComponent } from './componente/home/home.component';
 import { SobreComponent } from './componente/sobre/sobre.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CarrinhoComponent } from './componente/carrinho/carrinho.component';
+import { CapaComponent } from './componente/capa/capa.component';
+import { CadastroAdminComponent } from './componente/cadastro-admin/cadastro-admin.component';
+import { RecuperarSenhaComponent } from './componente/recuperar-senha/recuperar-senha.component';
 
 
 @NgModule({
@@ -30,6 +33,9 @@ import { CarrinhoComponent } from './componente/carrinho/carrinho.component';
     HomeComponent,
     SobreComponent,
     CarrinhoComponent,
+    CapaComponent,
+    CadastroAdminComponent,
+    RecuperarSenhaComponent,
 
   ],
   imports: [

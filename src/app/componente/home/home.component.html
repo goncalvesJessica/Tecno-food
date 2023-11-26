@@ -3,18 +3,32 @@
 <header class="header d-flex">
   <h2 class="ff-inter">Meus produtos</h2>
   <input data-test-id="search-input-field" tabindex="0" role="search" type="text" name="q" autocomplete="off" aria-label="Busque por item ou loja" class="search-input__field" placeholder="Busque por item ou loja" value="">
-</header>
 
+</header>
+<div class="root">
+
+  <label class="select">
+    <select class="select" >
+      <option value="Relevância">Relevância</option>
+      <option value="Mais vendidos">Mais vendidos</option>
+      <option value="Mais recentes">Mais recentes</option>
+      <option value="Maior preço">Maior preço</option>
+      <option value="Menor preço">Menor preço</option>
+      <option value="De A a Z">De A a Z</option>
+      <option value="De Z a A">De Z a A</option>
+    </select>
+  </label>
+  <div>
 
 <div class="cards">
   <div *ngFor="let produto of produtos" class="cards__item">
     <div class="card">
       <div class="card__image card__image--fence"></div>
       <div class="card__content">
-        <th class="nome">Nome: {{produto.nome}}</th>
-        <th class="nome">Valor: {{produto.valor}}</th>
+        <th class="nome">Nome: {{produto.name}}</th>
+        <th class="nome">Valor: {{produto.value}},00</th>
 
-        <p class="card__text">Descrição: {{produto.descricao}}</p>
+        <p class="card__text">Descrição: {{produto.description}}</p>
 
         <button class="buybutton">
           <i class="fas fa-shopping-cart"></i> Comprar
@@ -30,27 +44,3 @@
 </div>
 
 
-
-
-
-<!-- <div class="acoes">
-      <button class="botao-editar">
-        aqui
-      </button>
-      <button class="botao-editar">
-        aqui
-      </button>
-
-        </div> -->
-<!-- <div class=" produto">
-
-      <th class="nome">Nome: {{produto.nome}}</th>
-      <br>
-      <th class="nome">Valor: {{produto.valor}}</th>
-      <br>
-      <th class="nome">Quantidade: {{produto.quantidade}}</th>
-      <br>
-      <th class="nome"> Descrição:{{produto.descricao}}</th>
-      <br>
-      <th class="nome">{{produto.categoria}}</th>
-    </div> -->

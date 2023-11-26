@@ -7,19 +7,23 @@ import { CadastroUsuarioComponent } from './componente/cadastro-usuario/cadastro
 import { HomeComponent } from './componente/home/home.component';
 import { SobreComponent } from './componente/sobre/sobre.component';
 import { CarrinhoComponent } from './componente/carrinho/carrinho.component';
+import { CapaComponent } from './componente/capa/capa.component';
+import { CadastroAdminComponent } from './componente/cadastro-admin/cadastro-admin.component';
+import { RecuperarSenhaComponent } from './componente/recuperar-senha/recuperar-senha.component';
 
 
 
 const routes: Routes = [
-  { path: 'listar', component: ListarProdutosComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'listar', component: ListarProdutosComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroUsuarioComponent },
   { path: 'sobre', component: SobreComponent },
   { path: 'criar', component: CriarProdutosComponent },
   { path: 'carrinho', component: CarrinhoComponent },
-
-  { path: '',component:LoginComponent },
+  { path: 'admin', component: CadastroAdminComponent },
+  { path: 'recuperar', component: RecuperarSenhaComponent },
+  { path: '',component:CapaComponent },
   { path: '**', pathMatch: 'full', redirectTo: '' }
 ];
 

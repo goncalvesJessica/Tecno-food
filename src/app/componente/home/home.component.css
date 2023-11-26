@@ -145,7 +145,7 @@ img {
 }
 
 .card__image--fence {
-  background-image: url(https://unsplash.it/800/600?image=59);
+  background-image: url(../../../assets/imagens/fotopatrao.jpg);
 }
 
 .card__title {
@@ -264,4 +264,21 @@ html {
 ::selection {
     color: #fff;
     background: #ea1d2c;
+}
+select {
+
+  border: 0;
+  outline: 0;
+  font: inherit;
+  width: 10rem;
+  padding: 8%;
+  /* background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em); */
+  color:black;
+  border-radius: 0.25em;
+  /* box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2); */
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  margin-left: 1010%;
 }

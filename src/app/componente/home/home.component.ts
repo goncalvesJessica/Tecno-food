@@ -15,7 +15,7 @@ import { HttpHeaders } from '@angular/common/http';
 
 export class HomeComponent implements OnInit {
 
-  private readonly api = "https://localhost:7151/produto";
+  private readonly api = "https://localhost:7151/product";
   produtos: any[] = [];
   produtoId = "";
 
