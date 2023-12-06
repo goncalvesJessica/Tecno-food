@@ -1,8 +1,9 @@
 export class Usuario {
   id?: number;
-  nome?:string;
+  name?:string;
   email?: string;
   cpf?: string;
-  celular?: number;
-  senha?: number;
+  telephone?: string;
+  password?: string;
+  role?: string;
 }

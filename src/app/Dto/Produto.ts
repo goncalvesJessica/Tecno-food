@@ -1,8 +1,8 @@
 export class Produto {
   id?: number;
-  nome?:string;
-  descricao?: string;
-  categoria?: string;
-  valor?: number;
-  quantidade?: number;
+  name?:string;
+  description?: string;
+  category?: string;
+  value?: number;
+  quantity?: number;
 }

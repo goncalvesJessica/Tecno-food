@@ -5,17 +5,17 @@
     <h2 class="form_title title">Criar produto</h2>
 
     <form>
-      <input class="form__input" type="text" placeholder="Nome do produto" id="produto" [(ngModel)]="produto.nome" name="nome">
+      <input class="form__input" type="text" placeholder="Nome do produto" id="produto" [(ngModel)]="produto.name" name="name">
 
 
-      <input class="form__input" type="number" placeholder="Valor" id="valor" [(ngModel)]="produto.valor" name="valor">
+      <input class="form__input" type="number" placeholder="Valor" id="valor" [(ngModel)]="produto.value" name="value">
 
 
       <input class="form__input" type="number" placeholder="Quantidade" id="quantidade"
-        [(ngModel)]="produto.quantidade" name="quantidade">
+        [(ngModel)]="produto.quantity" name="quantity">
 
 
-      <input class="form__input_d" type="text" placeholder="Descrição" id="descricao" [(ngModel)]="produto.descricao" name="descricao">
+      <input class="form__input_d" type="text" placeholder="Descrição" id="descricao" [(ngModel)]="produto.description" name="description">
 
 
       <div class="root">
@@ -41,10 +41,10 @@
               <div class="card__content">
         <div class="modelo modelo1 ff-roboto-mono">
 
-          <p class="produto">Nome:{{ produto.nome }}</p>
-          <p class="valor">Valor:<b>{{ produto.valor }}</b></p>
-          <p class="quantidade">Quantidade:<b>{{ produto.quantidade }}</b></p>
-          <p class="descricao">Descrição:<b>{{ produto.descricao }}</b></p>
+          <p class="produto">Nome:{{ produto.name }}</p>
+          <p class="valor">Valor:<b>{{ produto.value }}</b></p>
+          <p class="quantidade">Quantidade:<b>{{ produto.quantity }}</b></p>
+          <p class="descricao">Descrição:<b>{{ produto.description }}</b></p>
         </div>
       </div>
     </div>

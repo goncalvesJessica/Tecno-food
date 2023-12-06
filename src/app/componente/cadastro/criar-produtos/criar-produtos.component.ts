@@ -1,11 +1,6 @@
 import { Produto } from './../../../Dto/Produto';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
-
-
-
 
 @Component({
   selector: 'app-criar-produtos',

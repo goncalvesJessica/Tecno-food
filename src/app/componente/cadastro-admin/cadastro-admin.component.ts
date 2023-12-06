@@ -1,43 +1,71 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Usuario } from './../../Dto/Usuario';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro-admin',
   templateUrl: './cadastro-admin.component.html',
   styleUrls: ['./cadastro-admin.component.css']
 })
-export class CadastroAdminComponent implements OnInit {
+export class CadastroAdminComponent {
+  private readonly api = "https://localhost:7151/User";
+  usuario: Usuario = new Usuario();
 
-  email: string = '';
-  celular: string = '';
-  cpf: string = '';
   isEmailValid: boolean = true;
   isCelularValid: boolean = true;
   isCpfValid: boolean = true;
   isClosed = false;
 
-  constructor() { }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  router: Router;
+
+  constructor(private client: HttpClient, router: Router) {this.router = router;}
+
+  Cadastrar(){
+    console.log("aqui")
+    this.usuario.role = "admin";
+
+    const model = JSON.parse(JSON.stringify(this.usuario));
+    console.log(model)
+
+    this.client.post<Usuario>(this.api, model, {
+      headers: new HttpHeaders({
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      })
+    }).subscribe(
+      (response) => {
+        this.router.navigate(['/listar']);
+      },
+      (e) => {
+        console.log(e);
+      });
   }
 
   toggleEye() {
     this.isClosed = !this.isClosed;
   }
+
   validarEmail() {
     // Use uma expressão regular para validar o formato do e-mail
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    this.isEmailValid = emailRegex.test(this.email);
+    if (this.usuario.email) {
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      this.isEmailValid = emailRegex.test(this.usuario.email);
+    }
   }
 
   validarCelular() {
     // Use uma expressão regular para validar o formato do número de celular (formato brasileiro)
-    const celularRegex = /^\(?\d{2}\)?[-.\s]?\d{5}[-.\s]?\d{4}$/;
-    this.isCelularValid = celularRegex.test(this.celular);
+    if (this.usuario.telephone) {
+      const celularRegex = /^\(?\d{2}\)?[-.\s]?\d{5}[-.\s]?\d{4}$/;
+      this.isCelularValid = celularRegex.test(this.usuario.telephone.toString());
+    }
   }
 
   validarCpff() {
-    // Use uma função de validação de CPF
-    this.isCpfValid = this.validarCpf(this.cpf); // Chamando a função corretamente
+    if (this.usuario.cpf) {
+      this.isCpfValid = this.validarCpf(this.usuario.cpf); // Chamando a função corretamente
+    }
   }
 
   private validarCpf(cpf: string): boolean {
@@ -87,4 +115,6 @@ export class CadastroAdminComponent implements OnInit {
     return true; // O CPF é válido
   }
 
+
 }
+

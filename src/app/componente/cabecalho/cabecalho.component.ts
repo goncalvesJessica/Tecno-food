@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserLocalStorage } from './../../Dto/UserLocalStorage';
 
 @Component({
   selector: 'app-cabecalho',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabecalhoComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
+  mostrarMenu: boolean = true;
 
   ngOnInit(): void {
   }
-
 }
