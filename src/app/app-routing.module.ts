@@ -10,6 +10,8 @@ import { CarrinhoComponent } from './componente/carrinho/carrinho.component';
 import { CapaComponent } from './componente/capa/capa.component';
 import { CadastroAdminComponent } from './componente/cadastro-admin/cadastro-admin.component';
 import { RecuperarSenhaComponent } from './componente/recuperar-senha/recuperar-senha.component';
+import { CabecalhoComponent } from './componente/cabecalho/cabecalho.component';
+import { CabecalhoAdminComponent } from './componente/cabecalho-admin/cabecalho-admin.component';
 
 
 
@@ -20,11 +22,15 @@ const routes: Routes = [
   { path: 'cadastro', component: CadastroUsuarioComponent },
   { path: 'sobre', component: SobreComponent },
   { path: 'criar', component: CriarProdutosComponent },
+  { path: 'criar/:id', component: CriarProdutosComponent },
   { path: 'carrinho', component: CarrinhoComponent },
   { path: 'admin', component: CadastroAdminComponent },
   { path: 'recuperar', component: RecuperarSenhaComponent },
   { path: '',component:CapaComponent },
+  { path: 'capecalho', component: CabecalhoComponent },
+  { path: 'capecalhoAdmin', component: CabecalhoAdminComponent },
   { path: '**', pathMatch: 'full', redirectTo: '' }
+
 ];
 
 @NgModule({

@@ -1,27 +1,31 @@
-
+<app-cabecalho-admin></app-cabecalho-admin>
 <section style="margin-left: 33%;">
+
   <div class="cadastro">
 
     <h2 class="form_title title">Criar produto</h2>
 
     <form>
-      <input class="form__input" type="text" placeholder="Nome do produto" id="produto" [(ngModel)]="produto.name" name="name">
+      <input class="form__input" type="hidden" id="id" [(ngModel)]="produto.id"
+        name="id">
+
+      <input class="form__input" type="text" placeholder="Nome do produto" id="nome" [(ngModel)]="produto.name"
+        name="name">
 
 
       <input class="form__input" type="number" placeholder="Valor" id="valor" [(ngModel)]="produto.value" name="value">
 
 
-      <input class="form__input" type="number" placeholder="Quantidade" id="quantidade"
-        [(ngModel)]="produto.quantity" name="quantity">
+      <input class="form__input" type="number" placeholder="Quantidade" id="quantidade" [(ngModel)]="produto.quantity"
+        name="quantity">
 
 
-      <input class="form__input_d" type="text" placeholder="Descrição" id="descricao" [(ngModel)]="produto.description" name="description">
+      <input class="form__input_d" type="text" placeholder="Descrição" id="descricao" [(ngModel)]="produto.description"
+        name="description">
 
-
-      <div class="root">
-
+        <div class="root">
         <label class="select">
-          <select class="select" >
+          <select class="select" [(ngModel)]="produto.category" name="category">
             <option value="Salgado">Salgado</option>
             <option value="Lanches">Lanches</option>
             <option value="Sobremesas">Sobremesas</option>
@@ -31,36 +35,35 @@
           </select>
         </label>
         <div>
-        <br>
-        Prévia:
+          <br>
+          Prévia:
 
-        <div class="cards">
-          <div class="cards__item">
-            <div class="card">
-              <div class="card__image card__image--fence"></div>
-              <div class="card__content">
-        <div class="modelo modelo1 ff-roboto-mono">
+          <div class="cards">
+            <div class="cards__item">
+              <div class="card">
+                <div class="card__image card__image--fence"></div>
+                <div class="card__content">
+                  <div class="modelo modelo1 ff-roboto-mono">
 
-          <p class="produto">Nome:{{ produto.name }}</p>
-          <p class="valor">Valor:<b>{{ produto.value }}</b></p>
-          <p class="quantidade">Quantidade:<b>{{ produto.quantity }}</b></p>
-          <p class="descricao">Descrição:<b>{{ produto.description }}</b></p>
-        </div>
-      </div>
-    </div>
-      <div >
-          <button class="form__button button submit" type="button" (click)="Create()">
-            CADASTRAR
-          </button>
-      </div>
+                    <p class="produto">Nome:{{ produto.name }}</p>
+                    <p class="valor">Valor:<b>{{ produto.value }}</b></p>
+                    <p class="quantidade">Quantidade:<b>{{ produto.quantity }}</b></p>
+                    <p class="descricao">Descrição:<b>{{ produto.description }}</b></p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button class="form__button button submit" type="button" (click)="upSert()">
+                  CADASTRAR
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-        </div>
-        </div>
+      </div>
     </form>
 
   </div>
 
 
 </section>
-

@@ -1,8 +1,9 @@
+<app-cabecalho-admin></app-cabecalho-admin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 <header class="header d-flex">
   <h2 class="ff-inter">Meus produtos</h2>
-  <button routerLink="/produto" class="botao"> Adicionar produtos </button>
+  <button routerLink="/criar" class="botao"> Adicionar produtos </button>
 </header>
 
 
@@ -12,12 +13,12 @@
       <div class="card__image card__image--fence"></div>
       <div class="card__content">
         <th class="nome">Nome: {{produto.name}}</th>
-        <th class="nome">Valor: {{produto.value}}</th>
+        <th class="nome">Valor: {{produto.value}},00</th>
         <p class="card__text">Descrição: {{produto.description}}</p>
         <br>
         <div class="button-container">
-          <button class="edit-button"><i class="fas fa-edit"></i></button>
-          <button class="delete-button"><i class="fas fa-trash-alt"></i></button>
+          <button class="edit-button" routerLink="/criar/{{produto.id}}" ><i class="fas fa-edit"></i></button>
+          <button class="delete-button" (click)="Remove(produto.id)"><i class="fas fa-trash-alt"></i></button>
 
 
         </div>

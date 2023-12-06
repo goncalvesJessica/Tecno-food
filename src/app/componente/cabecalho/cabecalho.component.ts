@@ -9,7 +9,6 @@ import { UserLocalStorage } from './../../Dto/UserLocalStorage';
 export class CabecalhoComponent implements OnInit {
 
   constructor() {}
-  mostrarMenu: boolean = true;
 
   ngOnInit(): void {
   }

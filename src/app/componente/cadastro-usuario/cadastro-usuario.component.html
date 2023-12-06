@@ -33,10 +33,15 @@
 
         <div class="form-group">
           <div class="password-input-container">
-            <input class="form__input" id="password" [(ngModel)]="usuario.password" name="password" [type]="isClosed ? 'password' : 'text'"
-              placeholder="Digite sua senha">
+            <input class="form__input" id="password" [(ngModel)]="usuario.password" name="password" (input)="validarSenha()"
+             [type]="isClosed ? 'password' : 'text'"
+              placeholder="Digite sua senha"
+              >
+
             <div class="eye-icon" [ngClass]="{ 'closed': isClosed }" (click)="toggleEye()"></div>
+
           </div>
+          <span *ngIf="!isPasswordValid" class="error-message">Deve contem 8 caracteris</span>
         </div>
 
         <button class="form__button button submit" (click)="Cadastrar()">CADASTRAR</button>

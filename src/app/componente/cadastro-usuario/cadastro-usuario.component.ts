@@ -15,6 +15,7 @@ export class CadastroUsuarioComponent {
   isEmailValid: boolean = true;
   isCelularValid: boolean = true;
   isCpfValid: boolean = true;
+  isPasswordValid: boolean = true;
   isClosed = false;
   router: Router;
 
@@ -58,6 +59,12 @@ export class CadastroUsuarioComponent {
     if (this.usuario.telephone) {
       const celularRegex = /^\(?\d{2}\)?[-.\s]?\d{5}[-.\s]?\d{4}$/;
       this.isCelularValid = celularRegex.test(this.usuario.telephone.toString());
+    }
+  }
+
+  validarSenha() {
+    if (this.usuario.password) {
+      this.isPasswordValid = this.usuario.password.length >= 8;
     }
   }
 

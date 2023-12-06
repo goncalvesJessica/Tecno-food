@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
 
   private readonly api = "https://localhost:7151/Login";
   isClosed = false;
+  error = false;
 
   toggleEye() {
     this.isClosed = !this.isClosed;
@@ -44,9 +45,10 @@ export class LoginComponent implements OnInit {
           var x = JSON.parse(user) as UserLocalStorage;
         }
 
-        this.router.navigate(['/listar']);
+        this.router.navigate(['/home']);
       },
       (e) => {
+        this.error = true;
         console.log(e);
       });
   }

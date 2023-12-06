@@ -17,7 +17,9 @@ import { CarrinhoComponent } from './componente/carrinho/carrinho.component';
 import { CapaComponent } from './componente/capa/capa.component';
 import { CadastroAdminComponent } from './componente/cadastro-admin/cadastro-admin.component';
 import { RecuperarSenhaComponent } from './componente/recuperar-senha/recuperar-senha.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PopupComponent } from './componente/popup/popup.component';
+import { CabecalhoAdminComponent } from './componente/cabecalho-admin/cabecalho-admin.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,9 @@ import { RecuperarSenhaComponent } from './componente/recuperar-senha/recuperar-
     CapaComponent,
     CadastroAdminComponent,
     RecuperarSenhaComponent,
+    PopupComponent,
+    CabecalhoAdminComponent
+
 
   ],
   imports: [
@@ -43,6 +48,7 @@ import { RecuperarSenhaComponent } from './componente/recuperar-senha/recuperar-
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    NgbModule,
 
   ],
   providers: [],
